@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
   public int solution(String s) {
-    int answer = 0;
     HashMap<String, String> map = getMap();
     StringBuffer sr = new StringBuffer();
     StringBuffer aNum = new StringBuffer();
