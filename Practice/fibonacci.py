@@ -22,6 +22,7 @@ def fib_loop(num):
   return current_n 
 
 def fib_list(num):
+  # 저장 형식의 피보나치 수열
   result = [-1] * num
   result[0] = 0
   result[1] = 1
