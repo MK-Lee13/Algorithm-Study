@@ -75,5 +75,22 @@ def optimize_quickSort(arr):
 
   return sort(0, len(arr) - 1)
 
+def quickSort_R(arr):
+  if len(arr) <= 1:
+    return arr
+  pivot = arr[len(arr) // 2]
+  less, equal, great = [], [], []
+  for el in arr:
+    if el > pivot:
+      great.append(el)
+    elif el < pivot:
+      less.append(el)
+    else:
+      equal.append(el)
+  
+  return quickSort_R(great) + equal + quickSort_R(less)
+
+
 print(quickSort([6, 5, 1, 4, 7, 2, 3]))
+print(quickSort_R([6, 5, 1, 4, 7, 2, 3]))
 print(optimize_quickSort([6, 5, 1, 4, 7, 2, 3]))
