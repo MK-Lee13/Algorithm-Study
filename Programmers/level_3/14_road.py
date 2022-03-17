@@ -1,5 +1,4 @@
 def solution(m, n, puddles):
-    answer = 0
     p_map = make_map(m, n)
     p_map[0][0] = 1
     for i in range(0, n):
